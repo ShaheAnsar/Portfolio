@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muzzammil Shahe Ansar | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #fdfdfd;
+      color: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      color: #555;
+    }
+    section {
+      max-width: 600px;
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+    h2 {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    .project {
+      margin-bottom: 1.5rem;
+    }
+    .project h3 {
+      margin: 0;
+    }
+    .project p {
+      margin: 0.3rem 0 0;
+      color: #333;
+    }
+    footer {
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: auto;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Muzzammil Shahe Ansar</h1>
+    <p>Embedded Engineer</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>Doing an MS in CS with a BS in EE. I enjoy working with hands-on anything. Embedded engineering is ideal for that - I work with code that runs at the lowest possible level and interact with electronics all day long.
+	There is an endless variety of things to do and learn in this field too - from motor control to Tiny ML to signal processing. If you think you have a problem that sounds similar then I might be your ideal person!</p>
+  </section>
+
+  <section>
+    <h2>Cool stuff I do</h2>
+
+	<div class="project">
+		<h3>Bootloader with Redundancy (Embedded Systems)</h3>
+		<p>Divides flash into application and backup regions. Automatically switches to backup if corruption occurs. Supports UART firmware updates with bare-metal code. Thought it would be fun - alas I regret to say it was a boring project to finish <a href="https://github.com/ShaheAnsar/STM32-Bootloader">View project</a></p>
+	</div>
+
+	<div class="project">
+		<h3>x86 Kernel (Programming)</h3>
+		<p>A simple x86 kernel written in C and assembly. I made this to learn how a basic x86 OS works, and wanted to go further than most 16-bit implementations, so I went 32-bit. Includes drivers for PIT, keyboard, VGA, and more. Uses GRUB. <a href="https://github.com/ShaheAnsar/ProtocolBroccoli">View project</a></p>
+	</div>
+
+	<div class="project">
+		<h3>4-bit CPU in Logisim (Computer Architecture)</h3>
+		<p>Graphical digital circuit of a simple CPU using a RISC style ISA. Was done as a learning project to understand how simple CPUs worked. A previous project on a Z80 (and the simplicity of building a system around it) was the inspiration.</p>
+	</div>
+
+	<div class="project">
+		<h3>STM32 Development Board (PCB Design, PCB Etching)</h3>
+		<p>1-layer board for STM32F030K6T6, designed for home etching using KiCAD. JLCPCB is cool but nothing beats having a PCB in an hour made out of components I already have on hand. <a href="https://github.com/ShaheAnsar/stm32f030k6t6_1lyr">View project</a></p>
+	</div>
+
+	<div class="project">
+		<h3>Function Generator (Embedded Systems)</h3>
+		<p>Controls an AD9833 waveform generator using register-level STM32 code. I used it as a make-shift function generator for audio circuits and filters. <a href="https://github.com/ShaheAnsar/funcgen">View project</a></p>
+	</div>
+
+	<div class="project">
+		<h3>Heated Etchant Bath (Embedded Systems)</h3>
+		<p>On-off temperature controller for a chemical etchant bath. Wanted to see how I'd fare with a safety critical design - you do not want to overheat the etchant. I used a heater and a relay to heat the waterbath. The etchant is kept in the water bath. The delta is carefully monitored and switched off if it gets close to a set limit. One hiccup - the display I was using had a weird non-standard version of I2C that the Atmega I used does not support, so I had to bit-bang the "I2C" display. I hate I2C with a passion but the bit-banging was fun. <a href="https://github.com/ShaheAnsar/EtchantHeatBath">View project</a></p> 
+	</div>
+
+	<div class="project">
+		<h3>Guitar Amplifier (Signal Processing, Power Amplification)</h3>
+		<p>Opamp-based front-end with effects and TDA2030 power amplifier. Implements distortion and 3-band EQ. My cheap amplifier broke, so I designed a simple one instead using parts I had on hand. Lesson - always have a bunch of audio components on hand.
+	</div>
+
+	<div class="project">
+		<h3>RGBDSLAM (SLAM, Sensor Fusion)</h3>
+		<p>Used Kinect V2 with FPFH matching for visual odometry. Graph optimization with GTSAM. It was my first research paper implementation - found an old ICRA paper that explained how RGBDSLAM worked, and I wanted to see if I could build it. It was the reason for my jump into robotics research. <a href="https://github.com/ShaheAnsar/RGBDSLAM">View project</a></p>
+	</div>
+
+	<div class="project">
+		<h3>Bayes Net SLAM Optimizer (SLAM, Sensor Fusion, Optimization)</h3>
+		<p>Constructs and optimizes a Bayes Net to solve SLAM. Includes a custom Gauss-Newton optimizer. Factor Graphs support in progress. I built this to understand how some of the frameworks I used for my original RBGDSLAM project worked. <a href="https://github.com/ShaheAnsar/2DSlamBackend">View project</a></p>
+	</div>
+
+	<div class="project">
+		<h3>Rasterized Renderer (Computer Graphics, Image Processing)</h3>
+		<p>Software implementation of the graphics pipeline. Includes line/triangle rendering, depth testing, alpha blending, and clipping. Like most of my projects, I just wanted to know how calls I make through OpenGL are acctually processed. <a href="https://github.com/ShaheAnsar/toyrenderer">View project</a></p>
+	</div>
+
+	<div class="project">
+		<h3>OpenGL Rendering Engine (Computer Graphics, Image Processing)</h3>
+		<p>Implements Phong, Blinn-Phong, and NPR shading. Features image filters. Found enough time on my hands after the project so I went ahead and implemented a simple ray-tracer completely in compute shaders just to see how well it would work. CG is still, to this date, the coolest of stuff that computers made possible. <a href="https://github.com/ShaheAnsar/toyrenderer">View project</a></p>
+	</div>
+
+    
+    
+    
+    
+    
+    
+    
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:m.shaheansar@rutgers.edu">m.shaheansar@rutgers.edu</a></p>
+    <p>GitHub: <a href="https://github.com/ShaheAnsar">https://github.com/ShaheAnsar</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/muzzammil-shahe-ansar-02432620a/">https://www.linkedin.com/in/muzzammil-shahe-ansar-02432620a/</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
